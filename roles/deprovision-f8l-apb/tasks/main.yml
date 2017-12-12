@@ -22,3 +22,9 @@
     - dc
     - service
     - route
+
+- name: delete configmapcontroller resource
+  command: oc delete {{ item }} configmapcontroller -n {{ namespace }}
+  with_items:
+    - dc
+    - serviceaccount
