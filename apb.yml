@@ -1,0 +1,22 @@
+version: 1.0
+name: f8l-apb
+description: Fabric8 Launcher
+bindable: True
+async: optional
+metadata:
+  displayName: Fabric8 Launcher
+  console.openshift.io/iconClass: fa fa-rocket
+plans:
+  - name: default
+    description: Deploy Fabric8 Launcher to the Ansible Service Broker
+    free: True
+    metadata: {}
+    parameters: 
+    - name: GITHUB_USER
+      required: True
+      type: string
+      title: Github username
+    - name: GITHUB_TOKEN
+      required: True
+      type: string
+      title: Github auth token

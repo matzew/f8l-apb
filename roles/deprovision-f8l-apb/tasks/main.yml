@@ -1,0 +1,24 @@
+- name: delete launchpad-backend resource
+  command: oc delete {{ item }} launchpad-backend -n {{ namespace }}
+  with_items:
+    - dc
+    - service
+
+- name: delete launchpad-frontend resource
+  command: oc delete {{ item }} launchpad-frontend -n {{ namespace }}
+  with_items:
+    - dc
+    - service
+
+- name: delete launchpad-missioncontrol resource
+  command: oc delete {{ item }} launchpad-missioncontrol -n {{ namespace }}
+  with_items:
+    - dc
+    - service
+
+- name: delete launchpad-nginx resource
+  command: oc delete {{ item }} launchpad-nginx -n {{ namespace }}
+  with_items:
+    - dc
+    - service
+    - route
