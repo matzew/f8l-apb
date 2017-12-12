@@ -1,5 +1,5 @@
 - name: "Install Launchpad template"
-  shell: "oc create -f https://raw.githubusercontent.com/openshiftio/launchpad-templates/{{ f8l_version }}/openshift/launchpad-template.yaml -n {{ namespace }}"
+  shell: "oc create -f https://raw.githubusercontent.com/fabric8-launcher/launcher-openshift-templates/master/openshift/launcher-template.yaml -n {{ namespace }}"
 
 - name: "Retrieve Openshift Host"
   shell: "oc cluster status | grep 'Web console URL' | awk '{print $4}'"
